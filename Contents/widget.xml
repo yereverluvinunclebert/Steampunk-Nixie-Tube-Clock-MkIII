@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<name>Steampunk Nixie Tube Clock</name>
+	<version>1.1</version>
+	<author name="Dean Beedell" />
+	<image usage="dock" src="Resources/dock.png"/>
+	<image usage="security" src="Resources/security.png"/>
+	<platform minVersion="4.5" />
+        <copyright>(c) 2011 Dean Beedell</copyright>
+        <description>Another slightly steampunk Yahoo widget</description>
+	<security>
+          <filesystem>full</filesystem>
+          <http>all</http>
+          <applescript>true</applescript>
+          <command>true</command>
+          <hotkey>false</hotkey>
+	</security>
+</metadata>
