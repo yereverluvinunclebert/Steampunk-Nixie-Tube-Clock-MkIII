@@ -19,13 +19,14 @@
  The widget can be resized - Hover the cursor over the widget. Press the CTRL key 
  and use your mousewheel up or down. The widget will resize dynamically.
  
- ![nixietubethin8](https://github.com/yereverluvinunclebert/Steampunk-Nixie-Tube-Clock-MkIII/assets/2788342/077572cd-5f23-48fb-ac54-02c871a7a585)
+![4G](https://github.com/yereverluvinunclebert/Steampunk-Nixie-Tube-Clock-MkIII/assets/2788342/cdc865b5-6dac-4205-ad34-78214646d06c)
 
  All javascript widgets need an engine to function, in this case the widget uses 
  the Yahoo Widget Konfabulator engine. The engine interprets the javascript and 
  creates the widget according to the XML description and using the images you 
  provide. 
 
+![About](https://github.com/yereverluvinunclebert/Steampunk-Nixie-Tube-Clock-MkIII/assets/2788342/24be856a-a976-4b30-b46f-86b5a61a1e99)
 
 Built using: 
 
@@ -44,7 +45,8 @@ Tested on :
 	Windows 10 Home 64bit on AMD    
 	Windows 11 64bit on Intel  
   
-   
+  ![3G](https://github.com/yereverluvinunclebert/Steampunk-Nixie-Tube-Clock-MkIII/assets/2788342/e292e9cc-65c4-4b01-ad86-e80eca548702)
+ 
  Dependencies:
  
  o A windows-alike o/s such as Windows XP, 7-11 or Apple Mac OSX 11.    	
