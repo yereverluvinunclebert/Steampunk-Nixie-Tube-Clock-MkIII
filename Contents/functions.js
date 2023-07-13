@@ -6,7 +6,7 @@ function otherwidgets() {
 	var answer = alert("This button opens a browser window and connects to the Steampunk widgets page on my site. Do you wish to proceed", "Open Browser Window", "No Thanks");
 
 	if (answer === 1) {
-		openURL("http://lightquick.co.uk/steampunk-widgets.html?Itemid=264");
+		openURL("https://www.deviantart.com/yereverluvinuncleber/gallery/59981269/yahoo-widgets");
 		if (preferences.soundsPref.value === "enable") {
 			play(winding, false);
 		}
@@ -15,56 +15,24 @@ function otherwidgets() {
 //=====================
 //End function
 //=====================
+
 
 //===========================================
 // this function opens the URL for paypal
 //===========================================
 function donate() {
-	var answer = alert("Help support the creation of more widgets like this, send us a beer! This button opens a browser window and connects to the Paypal donate page for this widget). Will you be kind and proceed?", "Open Browser Window", "No Thanks");
+    var answer = alert("Help support the creation of more widgets like this, send us a coffee! This button opens a browser window and connects to the Kofi donate page for this widget). Will you be kind and proceed?", "Open Browser Window", "No Thanks");
 
-	if (answer === 1) {
-                openURL("https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=info@lightquick.co.uk&currency_code=GBP&amount=2.50&return=&item_name=Donate%20a%20Beer");
-		if (preferences.soundsPref.value === "enable") {
-			play(winding, false);
-		}
-	}
+    if (answer === 1) {
+        openURL("https://www.ko-fi.com/yereverluvinunclebert");
+        if (preferences.soundsPref.value === "enable") {
+            play(winding, false);
+        }        
+    }
 }
 //=====================
 //End function
 //=====================
-
-//===========================================
-// this function opens my Amazon URL wishlist
-//===========================================
-function amazon() {
-	var answer = alert("Help support the creation of more widgets like this. Buy me a small item on my Amazon wishlist! This button opens a browser window and connects to my Amazon wish list page). Will you be kind and proceed?", "Open Browser Window", "No Thanks");
-
-	if (answer === 1) {
-		openURL("http://www.amazon.co.uk/gp/registry/registry.html?ie=UTF8&id=A3OBFB6ZN4F7&type=wishlist");
-	}
-}
-//=====================
-//End function
-//=====================
-
-//===========================================
-// this function opens the rocketdock URL
-//===========================================
-function rocketdock() {
-	var answer = alert("Log in and vote for my widgets on Rocketdock. This button opens a browser window and connects to the Rocketdock page where you can give the widget a 5 star rating... Will you be kind and proceed?", "Open Browser Window", "No Thanks");
-	if (answer === 1) {
-		openURL("http://rocketdock.com/addon/misc/39912");
-		if (preferences.soundsPref.value === "enable") {
-			play(winding, false);
-		}
-	}
-}
-//=====================
-//End function
-//=====================
-
-
-
 
 
 //===========================================
@@ -76,6 +44,23 @@ function nullfunction() {
 //=====================
 //End function
 //=====================
+
+
+
+//===========================================
+// this function opens the browser at the contact URL
+//===========================================
+function contact() {
+    var answer = alert("Visiting the support page - this button opens a browser window and connects to our contact us page where you can send us a support query or just have a chat). Proceed?", "Open Browser Window", "No Thanks");
+
+    if (answer === 1) {
+        openURL("https://www.facebook.com/people/Steampunk-Widgets/pfbid025qrSzGhRhc1NPyyyBCJaLaYGMUVB4T32ZQdHurJrHeKRtahqANnvBBts4q6QYJAfl/");
+    }
+}
+//=====================
+//End function
+//=====================
+
 
 
 // this function opens the online help file
@@ -100,116 +85,146 @@ function menuitem2OnClick() {
 function update() {
 	var answer = alert("Download latest version of the widget (this button opens a browser window and connects to the widget download page where you can check and download the latest zipped .WIDGET file). Proceed?", "Open Browser Window", "No Thanks");
 	if (answer === 1) {
-		openURL("http://lightquick.co.uk/jdownloads/steampunk-yahoo-thermionic-nixie-tube-valve-widget.html?Itemid=264");
+		openURL("https://github.com/yereverluvinunclebert/Steampunk-Nixie-Tube-Clock-MkIII");
 	}
 }
-
-// this function sets the main context menu
+//=========================================================================
+// this function assigns translations to preference descriptions and titles
+//=========================================================================
 function setmenu() {
-	var items = [], item;
+    mainWindow.onContextMenu = function() {
+        var items = [], mItem;
 
-	item = new MenuItem();
-	item.title = "Buy us a Beer with Paypal";
-	item.onSelect = donate;
-	items.push(item);
+            mItem = new MenuItem();
+            mItem.title = "Online Help";
+            mItem.onSelect = function () {
+                widgethelp();
+            };
+        items.push(mItem);
 
-	item = new MenuItem();
-	item.title = "Donate with Amazon";
-	item.onSelect = amazon;
-	items.push(item);
+            mItem = new MenuItem();
+            mItem.title = "Donate a Coffee with Ko-Fi";
+            mItem.onSelect = function () {
+                donate();
+            };
+        items.push(mItem);
 
-	item = new MenuItem();
-	item.title = "Vote on Rocketdock";
-	item.onSelect = rocketdock;
-	items.push(item);
+            mItem = new MenuItem();
+            mItem.title = "";
+            mItem.onSelect = function () {
+                nullfunction();
+            };
+        items.push(mItem);
 
-	item = new MenuItem();
-	item.title = "";
-	item.onSelect = nullfunction;
-	items.push(item);
+            mItem = new MenuItem();
+            mItem.title = "See More Steampunk Widgets";
+            mItem.onSelect = function () {
+                otherwidgets();
+            };
+        items.push(mItem);
 
-	item = new MenuItem();
-	item.title = "Online Help";
-	item.onSelect = menuitem1OnClick;
-	items.push(item);
+            mItem = new MenuItem();
+            mItem.title = "Download Latest Version";
+            mItem.onSelect = function () {
+                update();
+            };
+        items.push(mItem);
 
-	item = new MenuItem();
-	item.title = "Contact Support";
-	item.onSelect = menuitem2OnClick;
-	items.push(item);
+            mItem = new MenuItem();
+            mItem.title = "Display Licence Agreement...";
+            mItem.onSelect = function () {
+                displayLicence();
+            };
+        items.push(mItem);
 
-	item = new MenuItem();
-	item.title = "Display Licence Agreement...";
-	item.onSelect = function () {
-		displayLicence();
-	};
-	items.push(item);
+            mItem = new MenuItem();
+            mItem.title = "Contact Support";
+            mItem.onSelect = function () {
+                contact();
+            };
+        items.push(mItem);
 
-	item = new MenuItem();
-	item.title = "Download Latest Version";
-	item.onSelect = function () {
-		update();
-	};
-	items.push(item);
+            mItem = new MenuItem();
+            mItem.title = "";
+            mItem.onSelect = function() {
+                nullfunction();
+            };
+        items.push(mItem);
 
-	item = new MenuItem();
-	item.title = "See More Steampunk Widgets";
-	item.onSelect = otherwidgets;
-	items.push(item);
+            mItem = new MenuItem();
+            mItem.title = "Reveal Widget in Windows Explorer";
+            mItem.onSelect = function() {
+                findWidget();
+            };
+        items.push(mItem);
 
-	item = new MenuItem();
-	item.title = "";
-	item.onSelect = nullfunction;
-	items.push(item);
+            mItem = new MenuItem();
+            mItem.title = "";
+            mItem.onSelect = function() {
+                nullfunction();
+            };
+        items.push(mItem);
 
-        item = new MenuItem();
-        item.title = "Reveal Widget in Windows Explorer";
-        item.onSelect = function () {
-            findWidget();
-        };
-	items.push(item);
+            mItem = new MenuItem();
+            mItem.title = "Reload Widget (F5)";
+            mItem.onSelect = function () {
+                reloadWidget();
+            };
+        items.push(mItem);
 
-        item = new MenuItem();
-        item.title = "";
-        item.onSelect = function () {
-            nullfunction();
-        };
-	items.push(item);
-
-	item = new MenuItem();
-	item.title = "Reload Widget";
-	item.onSelect = function () {
-		reloadWidget();
-	};
-	items.push(item);
-	mainWindow.contextMenuItems = items;
-}
-
-
-//======================================================================================
-// Function to perform commands
-//======================================================================================
-function performCommand() {
-    if ( preferences.imageCmdPref.value == "" )
-    {
-        var answer = alert("This widget has not been assigned a double-click function yet - You need to open the preferences and set a function for this widget. Do you wish to proceed?", "Open Preferences", "No Thanks");
-        if (answer === 1) {
-                   showWidgetPreferences();
+        if (preferences.imageEditPref.value != "" && debugFlg === "1") {
+                mItem = new MenuItem();
+                mItem.title = "Edit Widget using " + preferences.imageEditPref.value ;
+                mItem.onSelect = function () {
+                    editWidget();
+                };
+                items.push(mItem);
         }
-    }
-    playSound(zzzz, false);
-    if (system.platform === "windows") {
-        runCommandInBg(taskcommand, "running task");
-    }
-    if (system.platform === "macintosh") {
-        filesystem.open(taskcommand);
-    }
+
+        mainWindow.contextMenuItems = items;
+
+    };
 }
 //=====================
 //End function
 //=====================
 
 
+
+//=====================
+// function to carry out a command
+//=====================
+function performCommand(method) {
+    var answer;
+
+    if (method === "menu") {
+        runCommandInBg(preferences.imageEditPref.value, "runningTask");
+    } else {
+        print("method "+method);
+        if (system.event.altKey) { // filesystem.open() call
+            if (preferences.openFilePref.value === "") {
+                answer = alert("This widget has not been assigned an alt+double-click function. You need to open the preferences and select a file to be opened. Do you wish to proceed?", "Open Preferences", "No Thanks");
+                if (answer === 1) {
+                    showWidgetPreferences();
+                }
+                return;
+            }
+            filesystem.open(preferences.openFilePref.value);
+        } else {
+            if (preferences.imageCmdPref.value === "") {
+                answer = alert("This widget has not been assigned a double-click function. You need to open the preferences and enter a run command for this widget. Do you wish to proceed?", "Open Preferences", "No Thanks");
+                if (answer === 1) {
+                    showWidgetPreferences();
+                }
+                return;
+            }
+                runCommandInBg(preferences.imageCmdPref.value, "runningTask");
+        }
+    }
+}
+//=====================
+//End function
+//=====================
 
 
 //===========================================
@@ -707,3 +722,18 @@ bg.onMouseWheel = function (event) {
 
 
 
+
+//===========================================
+// this function edits the widget
+//===========================================
+function editWidget() {
+    //var answer = alert("Editing the widget. Proceed?", "Open Editor", "No Thanks");
+    //if (answer === 1) {
+        //uses the contents of imageEditPref to initiate your default editor
+        performCommand("menu");
+    //}
+
+}
+//=====================
+//End function
+//=====================

@@ -17,6 +17,7 @@
     length, secondsShowPref, soundsPref, src, substring, ticking, value,
     visible, widthPref
 */
+var debugFlg = "";
 
 var hr, mn, se, dt, mnth, yr,
 	hour, mins, secs, date, month, year, am_pm,
@@ -77,6 +78,15 @@ function playSound(s) {
 // this function is called on startup in the controlling .kon file <action trigger="onload">
 //=========================================================================
 function startup() {
+    debugFlg = preferences.debugflgPref.value;
+    if (debugFlg === "1") {
+        preferences.imageEditPref.hidden=false;
+        preferences.imageCmdPref.hidden=false;
+    } else {
+        preferences.imageEditPref.hidden=true;
+        preferences.imageCmdPref.hidden=true;
+    }
+                    
     clockTimer.ticking = true;
     oldSecondsShowPref = preferences.secondsShowPref.value;
     oldWidthPref = preferences.widthPref.value;
