@@ -227,29 +227,30 @@ function performCommand(method) {
 //=====================
 
 
+
+
+
 //===========================================
 // this function causes explorer to be opened and the file selected
 //===========================================
 function findWidget() {
 
- var widgetName = "Steampunk Nixie Tube Clock.widget";
- // temporary development version of the widget
- //var widgetName = "magnifier2.widget";
- var widgetFullPath = convertPathToPlatform(system.userWidgetsFolder + "/" + widgetName);
- var alertString = "The widget folder is: \n";
- alertString += system.userWidgetsFolder + " \n\n";
- alertString += "The widget name is: \n";
- alertString += widgetName+".\n ";
- var answer = alert(alertString, "Open the widget's folder?", "No Thanks");
- if (answer === 1) {
-            if (filesystem.itemExists(widgetFullPath) )   {
-              //dosCommand = "Explorer.exe /e, /select,E:\\Documents and Settings\\Dean Beedell\\My Documents\\My Widgets\\mars 2.widget";
-              dosCommand = "Explorer.exe /e, /select," + widgetFullPath;
-              //print("dosCommand "+dosCommand);
-              //var explorerExe = runCommand(dosCommand, "bgResult");
-              filesystem.reveal(widgetFullPath);
-            }
- }
+
+    var widgetFullPath = convertPathToPlatform(system.userWidgetsFolder + "/" + widgetName);
+    var alertString = "The widget folder is: \n";
+    if (filesystem.itemExists(widgetFullPath)) {
+        alertString += system.userWidgetsFolder + " \n\n";
+        alertString += "The widget name is: \n";
+        alertString += widgetName + ".\n ";
+
+        alert(alertString, "Open the widget's folder?", "No Thanks");
+
+        filesystem.reveal(widgetFullPath);
+    } else {
+        widgetFullPath = resolvePath(".");   
+        filesystem.reveal(widgetFullPath);
+        print("widgetFullPath " + widgetFullPath);
+    }
 }
 //=====================
 //End function

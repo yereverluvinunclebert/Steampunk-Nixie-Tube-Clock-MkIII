@@ -18,6 +18,7 @@
     visible, widthPref
 */
 var debugFlg = "";
+var widgetName = "Steampunk Nixie Tube Clock.widget";
 
 var hr, mn, se, dt, mnth, yr,
 	hour, mins, secs, date, month, year, am_pm,
