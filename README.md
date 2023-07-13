@@ -1,6 +1,6 @@
 # Steampunk-Nixie-Tube-Clock-MkIII
 
- Cyberpunk Nixie Tube Clock widget MkIII, written in Javascript and XML for the Yahoo 
+ Steampunk/Cyberpunk Nixie Tube Clock widget MkIII, written in Javascript and XML for the Yahoo 
  Widget (Konfabulator) Engine. Created for XP, Vista, Win7, 8, 10+ as well as the 
  Apple Mac OSX prior to Catalina.
  
