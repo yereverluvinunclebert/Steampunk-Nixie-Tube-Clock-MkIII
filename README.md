@@ -51,7 +51,9 @@ Tested on :
  
  o A windows-alike o/s such as Windows XP, 7-11 or Apple Mac OSX 11.    	
  
- o Installation of the yahoo widget SDK runtime engine  
+ ![yahoo-logo-small_111](https://github.com/yereverluvinunclebert/Steampunk-Nixie-Tube-Clock-MkIII/assets/2788342/520d15a2-85e9-4601-9f8f-6600d7819f56)
+ 
+ o Installation ofthe yahoo widget SDK runtime engine  
  
 	Yahoo widget engine for Windows - http://g6auc.me.uk/ywidgets_sdk_setup.exe  
 	Yahoo widget engine for Mac - https://rickyromero.com/widgets/downloads/yahoo-widgets-4.5.2.dmg
