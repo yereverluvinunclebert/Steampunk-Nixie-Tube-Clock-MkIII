@@ -4,6 +4,7 @@
  Widget (Konfabulator) Engine. Created for XP, Vista, Win7, 8, 10+ as well as the 
  Apple Mac OSX prior to Catalina.
  
+![nixie](https://github.com/yereverluvinunclebert/Steampunk-Nixie-Tube-Clock-MkIII/assets/2788342/1c3de5c1-84b7-4b22-9508-eeeed78e049b)
 
  This widget is an attractive steampunk Yahoo widget for your desktop. It 
  displays a continuous time update on your desktop. It is based upon Nixie tubes 
@@ -12,10 +13,14 @@
  require. New about us page, repositions properly on tablet devices in 
  portrait/landscape mode. Can be locked by clicking on the second tube.
  
+ ![nixie-with-prefs](https://github.com/yereverluvinunclebert/Steampunk-Nixie-Tube-Clock-MkIII/assets/2788342/54dc31c6-95ea-4d73-bdf9-625444cb6663)
+
 
  The widget can be resized - Hover the cursor over the widget. Press the CTRL key 
  and use your mousewheel up or down. The widget will resize dynamically.
  
+ ![nixietubethin8](https://github.com/yereverluvinunclebert/Steampunk-Nixie-Tube-Clock-MkIII/assets/2788342/077572cd-5f23-48fb-ac54-02c871a7a585)
+
  All javascript widgets need an engine to function, in this case the widget uses 
  the Yahoo Widget Konfabulator engine. The engine interprets the javascript and 
  creates the widget according to the XML description and using the images you 
