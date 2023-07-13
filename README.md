@@ -61,7 +61,9 @@ Tested on :
  Running the widget using a javascript engine frees javascript from running only 
  within the captivity of a browser, you will now be able to run these widgets on 
  your Windows desktop as long as you have the correct widget engine installed.
-  
+ 
+  ![yahoo-widgets-logo](https://github.com/yereverluvinunclebert/Steampunk-Nixie-Tube-Clock-MkIII/assets/2788342/663b6c4e-1d7f-48e3-8c19-df22ef5e6355)
+
  Instructions for running Yahoo widgets on Windows
  =================================================
  
@@ -69,7 +71,9 @@ Tested on :
  2. Download the gauge from this repo.
  3. Unzip it
  4. Double-click on the resulting .KON file and it will install and run
- 
+
+ ![yahoo](https://github.com/yereverluvinunclebert/Steampunk-Nixie-Tube-Clock-MkIII/assets/2788342/61022005-ac04-4f59-ab99-c1f60db9a0d7)
+
  Instructions for running Yahoo widgets on Mac OS/X ONLY
  ========================================================
  
