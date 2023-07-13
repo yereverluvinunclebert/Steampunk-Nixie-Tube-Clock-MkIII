@@ -97,6 +97,7 @@ Tested on :
  menubar item should appear. Widgets can then be started from the menubar or by 
  double-clicking on the KON file in the usual way.
  
+![desktop-nixie-850](https://github.com/yereverluvinunclebert/Steampunk-Nixie-Tube-Clock-MkIII/assets/2788342/98181add-4d61-4f05-903e-72321f918578)
 
  
  LICENCE AGREEMENTS:
@@ -110,3 +111,4 @@ Tested on :
  With regard to the commercial use of incorporated images, permission and a
  licence would need to be obtained from the original owner and creator, ie. me.
  
+![nixie-font-450](https://github.com/yereverluvinunclebert/Steampunk-Nixie-Tube-Clock-MkIII/assets/2788342/0075a8e1-c623-4fff-8eee-49337ab5cf1a)
